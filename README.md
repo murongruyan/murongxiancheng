@@ -3,3 +3,30 @@
 
 
 4.0重大更新，支持自定义分配！！！
+配置路径：/sdcard/Android/muronggameopt/diycore.txt
+
+# 自定义游戏线程核心放置
+# 启用修改：status=1
+# 关闭修改：status=0
+# 示例：以下示例请勿操作修改
+# com.murongdiaodu {   # 包名 {
+# status=1             # 启用1 关闭0
+# app=0-7              # app进程放置0,1,2,3,4,5,6,7核心
+# UnityMain*=7          # UnityMain*线程放置7核心
+# UnityGfx*=2-4         # UnityGfx*线程放置2,3,4核心
+# Thread-*=4-6          # Thread-*线程放置4,5,6核心
+# CoreThread*=2-6       # CoreThread*线程放置2,3,4,5,6核心
+# UnityPreload*=6       # UnityPreload*线程放置6核心
+# Worker Thread*=2-7    # Worker Thread*线程放置2,3,4,5,6,7核心
+# Apollo-*=3            # Apollo-*线程放置3核心
+# Thread-*=2-3,5-6          # Thread-*线程放置2,3,5,6核心
+# Thread-{0-15}=7      # 表示Thread-0到Thread-15内都放置7核心
+# other=0-6            # 除此之外其它线程放置0,1,2,3,4,5,6核心
+}                    # }  结束
+# 示例：以上示例请勿操作修改
+# 部分游戏具体使用线程请使用Scene浏览
+
+# *星号表示通配符，意思为模糊搜索
+# {0-15}表示范围搜索，需准确填写前面的线程名，只留后面数字
+
+# 执行顺序：1.精确匹配 → 2. 范围搜索 → 3. 模糊搜索
