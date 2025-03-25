@@ -42,7 +42,9 @@
 #Thread-*=2-3,5-6          # Thread-*线程放置2,3,5,6核心
 
 
-#Thread-1[5-9]|Thread-2[0-5]=7      # 表示Thread-0到Thread-15内都放置7核心
+#Thread-0[0-9]=7
+
+#Thread-1[0-5]=7      # 表示Thread-0到Thread-15内都放置7核心
 
 
 #other=0-6            # 除此之外其它线程放置0,1,2,3,4,5,6核心
