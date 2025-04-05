@@ -1,3 +1,9 @@
+4.4：优化检测CPU簇集代码，添加一些日常应用
+
+
+
+
+
 4.3：更改为二改SutoLiu线程优化模块，按照CPU簇适配，已适配CPU2+3+2+1，代表CPU8GEN3，CPU3+4+1，代表CPU8GEN2，CPU4+3+1，代表CPU8sGEN3，CPU6+2，代表CPU8E。
 
 
